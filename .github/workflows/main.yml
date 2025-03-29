@@ -1,0 +1,29 @@
+name: Appsmith CI/CD
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Run Lint Checks (Modify based on your setup)
+        run: |
+          echo "Running lint checks..."
+          # Example: npm run lint (if using JavaScript-based checks)
+      
+      - name: Run Tests (If applicable)
+        run: |
+          echo "Running tests..."
+          # Add testing commands if needed
+      
+      - name: Deploy to Appsmith Cloud
+        run: |
+          echo "Syncing with Appsmith Cloud..."
+          # Appsmith should auto-sync when pushing to the GitHub repo
